@@ -74,6 +74,7 @@ while True:
                     max_object_counts[label] = object_counts[label]
 
             # Show the image
+            cv2.putText(img, "Press q to leave the program", (10, 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 1, cv2.LINE_AA)
             cv2.imshow('Object Detection', img)
 
     if current_time - prev_time >= interval:
