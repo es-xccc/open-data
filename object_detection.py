@@ -4,10 +4,10 @@ import cv2
 import time
 import csv
 from datetime import datetime
-from torchvision.models.detection import fasterrcnn_mobilenet_v3_large_320_fpn
+from torchvision.models.detection import fasterrcnn_mobilenet_v3_large_320_fpn, FasterRCNN_MobileNet_V3_Large_320_FPN_Weights
 
 # Load the pre-trained model
-model = fasterrcnn_mobilenet_v3_large_320_fpn(pretrained=True)
+model = fasterrcnn_mobilenet_v3_large_320_fpn(weights=FasterRCNN_MobileNet_V3_Large_320_FPN_Weights.COCO_V1)
 model.eval()
 
 # Load the labels used by the pre-trained model
